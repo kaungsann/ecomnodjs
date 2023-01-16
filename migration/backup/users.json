@@ -1,0 +1,22 @@
+[
+  {
+    "_id": "63bda3cebf74add3791c41ed",
+    "name": "kaungsanhein",
+    "email": "kaungsanhein@gmail.com",
+    "password": "$2a$10$n1gvn1ICCyeHGGSbaTG/se/NKopmatlvd41qXB0H.eZyiW4FBlnX.",
+    "phone": "09100100100",
+    "permits": [],
+    "roles": [],
+    "__v": 0
+  },
+  {
+    "_id": "63bda3cebf74add3791c41ee",
+    "name": "phonekaung",
+    "email": "phoekaung@gmail.com",
+    "password": "$2a$10$7WLUIN1fPz3NY2e7tBY4tOzeEX6T104giZSRIR73fFmzSlWsOzNIC",
+    "phone": "09200200200",
+    "permits": [],
+    "roles": [],
+    "__v": 0
+  }
+]
