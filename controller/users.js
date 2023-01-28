@@ -1,6 +1,7 @@
 const helper = require("../helperLibary/helper");
 const DB = require("../model/users");
 const roleDB = require("../model/roles");
+const permitDB = require("../model/permits");
 
 const register = async (req, res, next) => {
   let findName = await DB.findOne({ name: req.body.name });
@@ -24,11 +25,11 @@ const register = async (req, res, next) => {
 };
 
 const login = async (req, res, next) => {
-  let DBName = await DB.findOne({ email: req.body.email });
-  console.log("find dbname", DBName);
+  let DBName = await DB.findOne({ email: req.body.email }).populate(
+    "roles permits"
+  );
   if (DBName) {
     let result = helper.ComparePassword(req.body.password, DBName.password);
-    console.log("is that password ", result);
     if (result) {
       let users = DBName.toObject();
       delete users.password;
@@ -43,7 +44,7 @@ const login = async (req, res, next) => {
   }
 };
 const all = async (req, res, next) => {
-  let results = await DB.find().select("-__v -password");
+  let results = await DB.find().populate("roles permits");
   helper.helper(res, "all users ", results);
 };
 
@@ -63,7 +64,7 @@ const addRole = async (req, res, next) => {
 
 const removeRole = async (req, res, next) => {
   let userDB = await DB.findById(req.body.userId);
-  // console.log(userDB);
+  let roleId = await roleDB.findById(req.body.roleId);
   let foundId = userDB.roles.find((rolid) => rolid.equals(req.body.roleId));
   console.log("not found roles", foundId);
   if (foundId) {
@@ -77,10 +78,45 @@ const removeRole = async (req, res, next) => {
   }
 };
 
+const addPermit = async (req, res, next) => {
+  let userId = await DB.findById(req.body.userId);
+  let permitId = await permitDB.findById(req.body.permitId);
+
+  console.log(userId);
+  let foundPermits = userId.permits.find((per) => per.equals(permitId._id));
+
+  if (foundPermits) {
+    next(new Error("Permits Id is already in exits"));
+  } else {
+    await DB.findByIdAndUpdate(userId._id, {
+      $push: { permits: permitId._id },
+    });
+    let results = await DB.findById(userId._id);
+    helper.helper(res, "add permit user", results);
+  }
+};
+
+const removePermit = async (req, res, next) => {
+  let userId = await DB.findById(req.body.userId);
+  let permitId = await permitDB.findById(req.body.permitId);
+  let foundPermit = userId.permits.find((per) => per.equals(permitId._id));
+  if (foundPermit) {
+    await DB.findByIdAndUpdate(userId._id, {
+      $pull: { permits: permitId._id },
+    });
+    let remove = await DB.findById(userId._id);
+    helper.helper(res, "remove permits user", remove);
+  } else {
+    next(new Error("there is no this permit ID"));
+  }
+};
+
 module.exports = {
   register,
   login,
   all,
   addRole,
   removeRole,
+  addPermit,
+  removePermit,
 };

@@ -1,7 +1,7 @@
 const roleRouter = require("express").Router();
 const roleController = require("../controller/role");
 const { permitAndRole } = require("../helperLibary/schema");
-const { validBody } = require("../helperLibary/valid");
+const { validPermits, validBody } = require("../helperLibary/valid");
 roleRouter.get("/", roleController.all);
 roleRouter.post("/", roleController.addRole);
 roleRouter.post(
@@ -17,8 +17,17 @@ roleRouter.post(
 
 roleRouter
   .route("/:id")
-  .get(roleController.getSingle)
-  .patch(roleController.patch)
-  .delete(roleController.Drop);
+  .get(
+    validPermits(["Create_Category", "Edit_Category", "Delete_Category"]),
+    roleController.getSingle
+  )
+  .patch(
+    validPermits(["Create_Category", "Edit_Category", "Delete_Category"]),
+    roleController.patch
+  )
+  .delete(
+    validPermits(["Create_Category", "Edit_Category", "Delete_Category"]),
+    roleController.Drop
+  );
 
 module.exports = roleRouter;

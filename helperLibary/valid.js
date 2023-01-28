@@ -26,13 +26,19 @@ module.exports = {
   },
   validToken: async (req, res, next) => {
     let token = req.headers.authorization.split(" ")[1];
+    //console.log(token);
     if (token) {
-      let decode = jwt.verify(token, process.env.SECRET_KEY);
-      let users = await helper.get(decode._id);
-      if (users) {
-        req.user = users;
-        next();
-      } else {
+      try {
+        let decode = jwt.verify(token, process.env.SECRET_KEY);
+        console.log("token", decode);
+        let users = await helper.get(decode._id);
+        if (users) {
+          req.user = users;
+          next();
+        } else {
+          next(new Error("Tokenization error"));
+        }
+      } catch (error) {
         next(new Error("Tokenization error"));
       }
     } else {
@@ -46,6 +52,45 @@ module.exports = {
         next();
       } else {
         next(new Error("you don't have this permission"));
+      }
+    };
+  },
+  validRoles: (roles) => {
+    return async (req, res, next) => {
+      let bol = false;
+
+      for (let i = 0; i < roles.length; i++) {
+        let hasRole = req.user.roles.find((rol) => rol.name === roles[i]);
+        console.log("is it true", hasRole);
+        if (hasRole) {
+          bol = true;
+          break;
+        }
+      }
+      if (bol) {
+        next();
+      } else {
+        next(new Error("You are not vip roles"));
+      }
+    };
+  },
+  validPermits: (permits) => {
+    return async (req, res, next) => {
+      let bol = false;
+      console.log(req.user.permits);
+      for (let i = 0; i < permits.length; i++) {
+        let findPermit = req.user.permits.find(
+          (per) => per.name === permits[i]
+        );
+        if (findPermit) {
+          bol = true;
+          break;
+        }
+      }
+      if (bol) {
+        next();
+      } else {
+        next(new Error("You don't have permission"));
       }
     };
   },
