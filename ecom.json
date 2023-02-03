@@ -1,0 +1,1392 @@
+{
+	"info": {
+		"_postman_id": "abab523d-c03d-4095-9b0b-3caa357b9420",
+		"name": "ecom.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Role Manage",
+			"item": [
+				{
+					"name": "get roles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlsiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdkIiwiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIl0sInJvbGVzIjpbeyJfaWQiOiI2M2JkOGVkNmQ4NTAwMjFmZGNjN2NjN2EiLCJuYW1lIjoiT3dlciIsInBlcm1pdHMiOltdLCJfX3YiOjAsImNyZWF0ZSI6IjIwMjMtMDEtMThUMTU6NTY6MTAuNzEwWiJ9XSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTE4VDE1OjU2OjEwLjcwMVoiLCJpYXQiOjE2NzQwNTczNzAsImV4cCI6MTY3NDA3MTc3MH0.BUwZVAZQ3hImfCOZY6Yp6aYAudPFFldAK3LPQPWs2cc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/roles/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"roles",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Permits Manage",
+			"item": [
+				{
+					"name": "get permits",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlt7Il9pZCI6IjYzYmQ4ZWQ2ZDg1MDAyMWZkY2M3Y2M3ZCIsIm5hbWUiOiJDcmVhdGVfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NFoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwibmFtZSI6IkVkaXRfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NVoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIiwibmFtZSI6IkRlbGV0ZV9DYXRlZ29yeSIsImNyZWF0ZSI6IjIwMjMtMDEtMTBUMTY6MTQ6MTQuMTY1WiIsIl9fdiI6MH1dLCJyb2xlcyI6W3siX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdhIiwibmFtZSI6Ik93ZXIiLCJwZXJtaXRzIjpbXSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTE4VDE2OjQwOjIwLjY1NVoifV0sIl9fdiI6MCwiY3JlYXRlIjoiMjAyMy0wMS0xOFQxNjo0MDoyMC42NDZaIiwiaWF0IjoxNjc0MDYwMDIwLCJleHAiOjE2NzQwNzQ0MjB9.wwlsVNpS2zNA76_RCbN-grcsUWBXDUIo8x4AYfsKUhw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Delete_Category\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/permits/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"permits",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit permit",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlsiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdkIiwiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIl0sInJvbGVzIjpbeyJfaWQiOiI2M2JkOGVkNmQ4NTAwMjFmZGNjN2NjN2EiLCJuYW1lIjoiT3dlciIsInBlcm1pdHMiOltdLCJfX3YiOjAsImNyZWF0ZSI6IjIwMjMtMDEtMThUMTU6NTY6MTAuNzEwWiJ9XSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTE4VDE1OjU2OjEwLjcwMVoiLCJpYXQiOjE2NzQwNTczNzAsImV4cCI6MTY3NDA3MTc3MH0.BUwZVAZQ3hImfCOZY6Yp6aYAudPFFldAK3LPQPWs2cc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"HAHA\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/permits/63bd8ed6d850021fdcc7cc7e",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"permits",
+								"63bd8ed6d850021fdcc7cc7e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single get permit",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlt7Il9pZCI6IjYzYmQ4ZWQ2ZDg1MDAyMWZkY2M3Y2M3ZCIsIm5hbWUiOiJDcmVhdGVfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NFoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwibmFtZSI6IkVkaXRfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NVoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIiwibmFtZSI6IkRlbGV0ZV9DYXRlZ29yeSIsImNyZWF0ZSI6IjIwMjMtMDEtMTBUMTY6MTQ6MTQuMTY1WiIsIl9fdiI6MH1dLCJyb2xlcyI6W3siX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdhIiwibmFtZSI6Ik93ZXIiLCJwZXJtaXRzIjpbXSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTE4VDE2OjQwOjIwLjY1NVoifV0sIl9fdiI6MCwiY3JlYXRlIjoiMjAyMy0wMS0xOFQxNjo0MDoyMC42NDZaIiwiaWF0IjoxNjc0MDYwMDIwLCJleHAiOjE2NzQwNzQ0MjB9.wwlsVNpS2zNA76_RCbN-grcsUWBXDUIo8x4AYfsKUhw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/permits/63bd8ed6d850021fdcc7cc7f",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"permits",
+								"63bd8ed6d850021fdcc7cc7f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user Manage",
+			"item": [
+				{
+					"name": "login user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlt7Il9pZCI6IjYzYmQ4ZWQ2ZDg1MDAyMWZkY2M3Y2M3ZCIsIm5hbWUiOiJDcmVhdGVfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NFoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwibmFtZSI6IkVkaXRfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NVoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIiwibmFtZSI6IkRlbGV0ZV9DYXRlZ29yeSIsImNyZWF0ZSI6IjIwMjMtMDEtMTBUMTY6MTQ6MTQuMTY1WiIsIl9fdiI6MH1dLCJyb2xlcyI6W3siX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdhIiwibmFtZSI6Ik93ZXIiLCJwZXJtaXRzIjpbXSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTI4VDE2OjEyOjI4LjE3OFoifV0sIl9fdiI6MCwiY3JlYXRlIjoiMjAyMy0wMS0yOFQxNjoxMjoyOC4wMDRaIiwiaWF0IjoxNjc0OTIyMzQ4LCJleHAiOjE2NzQ5MzY3NDh9.7ZHHAicTWzULliCkWZuS6qfssYZ9DDczrgdfXa4mLcI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \n     \"email\": \"kaungsanhein@gmail.com\",\n     \"password\" : \"kaungsanhein1234\"\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/users/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add permit user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"userId\" : \"63bda3cebf74add3791c41ed\" ,\n\"permitId\" : \"63bd8ed6d850021fdcc7cc7f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/users/add/permit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"add",
+								"permit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"userId\" : \"63bda3cebf74add3791c41ed\" ,\n\"permitId\" : \"63bd8ed6d850021fdcc7cc7f\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/users/add/permit",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"users",
+								"add",
+								"permit"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "category Manage",
+			"item": [
+				{
+					"name": "get all categroy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlt7Il9pZCI6IjYzYmQ4ZWQ2ZDg1MDAyMWZkY2M3Y2M3ZCIsIm5hbWUiOiJDcmVhdGVfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NFoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwibmFtZSI6IkVkaXRfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NVoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIiwibmFtZSI6IkRlbGV0ZV9DYXRlZ29yeSIsImNyZWF0ZSI6IjIwMjMtMDEtMTBUMTY6MTQ6MTQuMTY1WiIsIl9fdiI6MH1dLCJyb2xlcyI6W3siX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdhIiwibmFtZSI6Ik93ZXIiLCJwZXJtaXRzIjpbXSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTE5VDE0OjQ0OjU4LjA5NFoifV0sIl9fdiI6MCwiY3JlYXRlIjoiMjAyMy0wMS0xOVQxNDo0NDo1Ny45MzJaIiwiaWF0IjoxNjc0MTM5NDk4LCJleHAiOjE2NzQxNTM4OTh9.CprZrsZJx7DQEHKIpaLGr2yOU3AYU9eVtUGuzWTPimg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add categroy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "electronic",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-10-12 23-47-17.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/category/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit category",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "kaungsann",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/category/63c96b5967c9e4c989e140da",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"63c96b5967c9e4c989e140da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/category/63c96b2bcd8e6b90d4d4e706",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"category",
+								"63c96b2bcd8e6b90d4d4e706"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "subcategory Manage",
+			"item": [
+				{
+					"name": "get all subcategory\\",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/subcategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single subcategory",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Subcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\" : \"Dell Laptop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/subcategory/63c97b2715faf84f7f4889b8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"subcategory",
+								"63c97b2715faf84f7f4889b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete subcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/subcategory/63c97b2715faf84f7f4889b8",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"subcategory",
+								"63c97b2715faf84f7f4889b8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add subcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Laptop",
+									"type": "default"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-11-22 03-12-24.png"
+								},
+								{
+									"key": "categoryId",
+									"value": "63c973957457fcd5e2b4e7fd",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/subcategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"subcategory"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "childCategory Manage",
+			"item": [
+				{
+					"name": "get all childcategory",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2JkYTNjZWJmNzRhZGQzNzkxYzQxZWQiLCJuYW1lIjoia2F1bmdzYW5oZWluIiwiZW1haWwiOiJrYXVuZ3NhbmhlaW5AZ21haWwuY29tIiwicGhvbmUiOiIwOTEwMDEwMDEwMCIsInBlcm1pdHMiOlt7Il9pZCI6IjYzYmQ4ZWQ2ZDg1MDAyMWZkY2M3Y2M3ZCIsIm5hbWUiOiJDcmVhdGVfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NFoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdlIiwibmFtZSI6IkVkaXRfQ2F0ZWdvcnkiLCJjcmVhdGUiOiIyMDIzLTAxLTEwVDE2OjE0OjE0LjE2NVoiLCJfX3YiOjB9LHsiX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdmIiwibmFtZSI6IkRlbGV0ZV9DYXRlZ29yeSIsImNyZWF0ZSI6IjIwMjMtMDEtMTBUMTY6MTQ6MTQuMTY1WiIsIl9fdiI6MH1dLCJyb2xlcyI6W3siX2lkIjoiNjNiZDhlZDZkODUwMDIxZmRjYzdjYzdhIiwibmFtZSI6Ik93ZXIiLCJwZXJtaXRzIjpbXSwiX192IjowLCJjcmVhdGUiOiIyMDIzLTAxLTIyVDE0OjE0OjA4LjExMloifV0sIl9fdiI6MCwiY3JlYXRlIjoiMjAyMy0wMS0yMlQxNDoxNDowOC4wMDJaIiwiaWF0IjoxNjc0Mzk2ODQ4LCJleHAiOjE2NzQ0MTEyNDh9.XBNxW87O3CsZmarHHYogDNLyI1lyfyNmVlJ0gEtIEoo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "mac m1 pro",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/childcategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"childcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add childcategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/childcategory",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"childcategory"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit childcategory",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/childcategory/63cd46bfc3f546fb76ffa5b5?name=mac book m2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"childcategory",
+								"63cd46bfc3f546fb76ffa5b5"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "mac book m2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete childcategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/childcategory/63cd46bfc3f546fb76ffa5b5?name=mac book m2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"childcategory",
+								"63cd46bfc3f546fb76ffa5b5"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "mac book m2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tag Manage",
+			"item": [
+				{
+					"name": "get all tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/tag",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"tag"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add tag",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "edit tag",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/tag/63cea309b5d97f4115ab968d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"tag",
+								"63cea309b5d97f4115ab968d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete tag",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/tag/63cea309b5d97f4115ab968d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"tag",
+								"63cea309b5d97f4115ab968d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery Manage",
+			"item": [
+				{
+					"name": "get all delivery",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/delivery",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add delvery",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Maung Maung",
+									"type": "default"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-10-12 23-47-17.png"
+								},
+								{
+									"key": "duration",
+									"value": "2days",
+									"type": "default"
+								},
+								{
+									"key": "remark",
+									"value": "not refund , not return",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "60000",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/delivery",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"delivery"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single delivery",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete delivery",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/delivery/63d12361d5e4b0d6d9a412ec",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"delivery",
+								"63d12361d5e4b0d6d9a412ec"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit delivery",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Mg Mg",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/delivery/63d126e37d9fba17aa3d1a4e",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"delivery",
+								"63d126e37d9fba17aa3d1a4e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Warranty Manage",
+			"item": [
+				{
+					"name": "get all  warranty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add warranty",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "1 years",
+									"type": "default"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-10-12 23-45-31.png"
+								},
+								{
+									"key": "remark",
+									"value": "not return new , with 10 days reparis",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single warranty",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty/63d12f177bda751bdb8af538",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty",
+								"63d12f177bda751bdb8af538"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit warranty",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "2 years",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty/63d12f177bda751bdb8af538",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty",
+								"63d12f177bda751bdb8af538"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete warranty",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/warranty/63d12f177bda751bdb8af538",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"warranty",
+								"63d12f177bda751bdb8af538"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product Manage",
+			"item": [
+				{
+					"name": "get all product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "add product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "I phone 11 pro max",
+									"type": "default"
+								},
+								{
+									"key": "price",
+									"value": "6000000",
+									"type": "default"
+								},
+								{
+									"key": "brand",
+									"value": "Mac book pro M2",
+									"type": "default"
+								},
+								{
+									"key": "categroy",
+									"value": "63cd67afbab941312c6cad6e",
+									"type": "default"
+								},
+								{
+									"key": "subcategory",
+									"value": "63cd6c3d68ec53ee7c78edad",
+									"type": "default"
+								},
+								{
+									"key": "childcategory",
+									"value": "63cd738cee3d13551abdcab5",
+									"type": "default"
+								},
+								{
+									"key": "tag",
+									"value": "63cea1fab5d97f4115ab9683",
+									"type": "default"
+								},
+								{
+									"key": "discount",
+									"value": "0.2",
+									"type": "default"
+								},
+								{
+									"key": "features",
+									"value": "CPU M2 chipset  Ram16 , display 14inches",
+									"type": "default"
+								},
+								{
+									"key": "description",
+									"value": "Battery life 24 hours",
+									"type": "default"
+								},
+								{
+									"key": "details",
+									"value": "That is a latest model",
+									"type": "default"
+								},
+								{
+									"key": "delivery",
+									"value": "63d1232dd5e4b0d6d9a412e9 , 63d2034e667637379c52a493",
+									"type": "default"
+								},
+								{
+									"key": "warranty",
+									"value": "63d12efd7bda751bdb8af535 , 63d14e7a9d4be5918c29b052",
+									"type": "default"
+								},
+								{
+									"key": "color",
+									"value": "#ff880 ,#eeddee",
+									"type": "default"
+								},
+								{
+									"key": "size",
+									"value": "Medium",
+									"type": "default"
+								},
+								{
+									"key": "rating",
+									"value": "5 stars",
+									"type": "default"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-10-12 23-45-31.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-11-22 03-12-24.png"
+								},
+								{
+									"key": "files",
+									"type": "file",
+									"src": "/home/kaungsann/Pictures/Screenshots/Screenshot from 2022-11-22 03-12-24.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:4000/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "page paginate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/product/paginate/4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"product",
+								"paginate",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit product",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/product",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all bytag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/product/paginate/bytag/1/63cea1fab5d97f4115ab9683",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"product",
+								"paginate",
+								"bytag",
+								"1",
+								"63cea1fab5d97f4115ab9683"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order Manage",
+			"item": [
+				{
+					"name": "get order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:4000/order",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "4000",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add order",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

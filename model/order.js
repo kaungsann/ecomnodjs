@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-const { Schema } = mongoose;
+let { Schema } = mongoose;
 
 const orderSchema = new Schema({
   user: { type: Schema.Types.ObjectId, ref: "user", required: true },
-  items: [{ type: Schema.Types.ObjectId, ref: "orderitem" }],
+  items: { type: Schema.Types.ObjectId, ref: "orderitem" },
   count: { type: Number, required: true },
-  total: { type: Number, requried: true },
+  total: { type: Number, required: true },
   create: { type: Date, default: Date.now },
 });
 
